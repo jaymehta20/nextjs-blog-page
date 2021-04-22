@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import BlogCard from "../components/BlogCard";
 
 export async function getStaticProps() {
@@ -19,9 +20,11 @@ export async function getStaticProps() {
   };
 }
 const Blog = ({ blogs }) => {
-  console.log(blogs);
   return (
     <>
+      <Head>
+        <title>Blog | Codegrain</title>
+      </Head>
       <main id="journal">
         <div className="spacer">
           <div className="container">
