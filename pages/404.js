@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const NotFound = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/");
+    }, 4000);
+  }, []);
   return (
     <>
       <div className="wrap">
@@ -23,7 +32,8 @@ const NotFound = () => {
                     <h1>404!</h1>
                     <p className="lead">Seems like you are lost.</p>
                     <h2>
-                      Lets get you <Link href="/">
+                      Lets get you{" "}
+                      <Link href="/">
                         <a>Home</a>
                       </Link>
                     </h2>

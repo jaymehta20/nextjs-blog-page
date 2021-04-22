@@ -10,10 +10,10 @@ const Skeleton = () => {
       <style jsx>{`
         .skeleton {
           max-width: 1200px;
-          margin: 20px auto;
+          margin: 250px auto;
         }
         .skeleton > div {
-          background: #dbcc1a;
+          background: #cfcfcf;
           border-radius: 4px;
           margin: 20px 0;
         }
