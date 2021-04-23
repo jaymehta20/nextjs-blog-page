@@ -258,7 +258,7 @@ main {
   padding-top: 5rem;
 }
 
-main:before {
+/* main:before {
   top: -10rem;
   left: -10rem;
   width: calc(100% + 20rem);
@@ -269,8 +269,8 @@ main:before {
   pointer-events: none;
   background-position: 50%;
   background-image: url(../public/img/noise.png);
-  animation: noise 2s steps(2) infinite;
-}
+  animation: noise 2s steps(2) infinite;  
+} */
 
 ::-moz-selection {
   background: var(--clr-eerie-black);
