@@ -82,7 +82,7 @@ const renderOptions = {
 
 const BlogDetails = ({ blog }) => {
   if (!blog) return <Skeleton />;
-  const { featuredImage, title, date, desc, content } = blog.fields;
+  const { featuredImage, title, date, desc, content, nextBlog } = blog.fields;
   console.log(blog);
 
   return (
@@ -119,6 +119,7 @@ const BlogDetails = ({ blog }) => {
                     <Link href="/">
                       <a>None</a>
                     </Link>
+                    {documentToReactComponents(nextBlog, renderOptions)}
                   </h2>
                 </div>
               </div>
