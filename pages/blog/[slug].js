@@ -82,7 +82,7 @@ const renderOptions = {
 
 const BlogDetails = ({ blog }) => {
   if (!blog) return <Skeleton />;
-  const { featuredImage, title, date, desc, content, nextBlog } = blog.fields;
+  const { title, date, desc, content, nextBlogLink } = blog.fields;
   console.log(blog);
 
   return (
@@ -116,9 +116,7 @@ const BlogDetails = ({ blog }) => {
                 <div className="col-lg-8 offset-lg-2 col-md-12">
                   <p>Next Article</p>
                   <h2>
-                    <Link href="/">
-                      <a>None</a>
-                    </Link>
+                    <div>{documentToReactComponents(nextBlogLink)}</div>
                   </h2>
                 </div>
               </div>
