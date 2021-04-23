@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-import Image from "next/image";
+import Head from "next/head";
 import Skeleton from "../../components/Skeleton";
 
 const client = createClient({
@@ -86,6 +86,9 @@ const BlogDetails = ({ blog }) => {
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <main id="journal">
         <div className="spacer">
           <article className="single">

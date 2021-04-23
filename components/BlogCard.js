@@ -6,6 +6,7 @@ const BlogCard = ({ blog }) => {
 
   return (
     <article>
+     
       <Link href={"/blog/" + slug}>
         <a className="smooth-leave">
           <div className="article-image">
