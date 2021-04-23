@@ -83,7 +83,6 @@ const renderOptions = {
 const BlogDetails = ({ blog }) => {
   if (!blog) return <Skeleton />;
   const { title, date, desc, content, nextBlogLink } = blog.fields;
-  console.log(blog);
 
   return (
     <>
