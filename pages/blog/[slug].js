@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Link from "next/link";
 import Head from "next/head";
 import Skeleton from "../../components/Skeleton";
 
@@ -107,6 +108,18 @@ const BlogDetails = ({ blog }) => {
                   <div className="blog-detail-img">
                     {documentToReactComponents(content, renderOptions)}
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="next-article">
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-12">
+                  <p>Next Article</p>
+                  <h2>
+                    <Link href="/">
+                      <a>None</a>
+                    </Link>
+                  </h2>
                 </div>
               </div>
             </div>
