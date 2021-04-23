@@ -111,15 +111,14 @@ const BlogDetails = ({ blog }) => {
                 </div>
               </div>
             </div>
-            <div class="next-article">
-              <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-12">
+            <div className="next-article">
+              <div className="row">
+                <div className="col-lg-8 offset-lg-2 col-md-12">
                   <p>Next Article</p>
                   <h2>
                     <Link href="/">
                       <a>None</a>
                     </Link>
-                    {documentToReactComponents(nextBlog, renderOptions)}
                   </h2>
                 </div>
               </div>
