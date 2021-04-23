@@ -105,7 +105,7 @@ const BlogDetails = ({ blog }) => {
               </div>
               <div className="row">
                 <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
-                  <div className="blog-detail-img">
+                  <div className="blog-detail-img code-bg">
                     {documentToReactComponents(content, renderOptions)}
                   </div>
                 </div>
