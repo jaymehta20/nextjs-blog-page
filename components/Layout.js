@@ -1,8 +1,12 @@
 import Link from "next/link";
-
+import Head from "next/head";
 const Layout = ({ children }) => {
   return (
     <>
+      <Head>
+        <script type="text/javascript" src="/js/plugins.min.js"></script>
+        <script type="text/javascript" src="/js/functions.js"></script>
+      </Head>
       <header>
         <div className="container">
           <div className="row">

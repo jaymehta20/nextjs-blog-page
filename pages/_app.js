@@ -8,10 +8,6 @@ import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <script type="text/javascript" src="/js/plugins.min.js"></script>
-        <script type="text/javascript" src="/js/functions.js"></script>
-      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
