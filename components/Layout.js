@@ -8,6 +8,45 @@ const Layout = ({ children }) => {
           <div className="row">
             <div className="col-md-12">
               <a className="logo smooth-leave" href="https://codegra.in/"></a>
+              <nav>
+                <ul>
+                  <li>
+                    <Link
+                      className="smooth-leave"
+                      href="https://codegra.in/about"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      className="smooth-leave"
+                      href="https://codegra.in/services"
+                    >
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a className="smooth-leave" href="https://codegra.in/work">
+                      Work
+                    </a>
+                  </li>
+                  <li>
+                    <Link className="smooth-leave" href="/">
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      className="smooth-leave"
+                      href="https://codegra.in/contact"
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <span className="nav-toggle">Menu</span>
             </div>
           </div>
         </div>

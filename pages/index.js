@@ -24,8 +24,6 @@ const Blog = ({ blogs }) => {
     <>
       <Head>
         <title>Blog | Codegrain</title>
-        <script type="text/javascript" src="/js/plugin.min.js"></script>
-        <script type="text/javascript" src="/js/function.js"></script>
       </Head>
       <main id="journal">
         <div className="spacer">
