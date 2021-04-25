@@ -4,8 +4,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <script type="text/javascript" src="/js/plugins.min.js"></script>
-        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/plugins.min.js" ></script>
+        <script type="text/javascript" src="/js/functions.js" ></script>
       </Head>
       <header>
         <div className="container">

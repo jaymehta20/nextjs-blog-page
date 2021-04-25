@@ -171,7 +171,7 @@ jQuery(function($) {
 			linkElement: ".smooth-leave",
 			loading: true,
 			loadingParentElement: "body",
-			loadingClass: "animsition-loading",
+			loadingClass: false,
 			loadingInner: "",
 			timeout: false,
 			timeoutCountdown: 5000,
