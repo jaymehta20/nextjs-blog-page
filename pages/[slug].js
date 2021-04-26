@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import Image from "next/image";
 import Head from "next/head";
 import Skeleton from "../components/Skeleton";
 
@@ -70,7 +71,7 @@ const renderOptions = {
     [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
       // render the EMBEDDED_ASSET as you need
       return (
-        <img
+        <Image
           src={`https://${node.data.target.fields.file.url}`}
           height={node.data.target.fields.file.details.image.height}
           width={node.data.target.fields.file.details.image.width}
