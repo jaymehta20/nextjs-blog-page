@@ -2,7 +2,7 @@ import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { twilight } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Head from "next/head";
 import Skeleton from "../../components/Skeleton";
 
@@ -93,7 +93,7 @@ const renderOptions = {
         return (
           <SyntaxHighlighter
             language="javascript"
-            style={twilight}
+            style={tomorrow}
             showLineNumbers
           >
             {text}
