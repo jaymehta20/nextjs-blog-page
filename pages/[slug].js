@@ -4,7 +4,7 @@ import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Head from "next/head";
-import Skeleton from "../../components/Skeleton";
+import Skeleton from "../components/Skeleton";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -129,9 +129,7 @@ const BlogDetails = ({ blog }) => {
               </div>
               <div className="row">
                 <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
-                  <div className="blog-detail-img code-bg">
-                    {documentToReactComponents(content, renderOptions)}
-                  </div>
+                  {documentToReactComponents(content, renderOptions)}
                 </div>
               </div>
             </div>
