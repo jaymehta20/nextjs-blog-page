@@ -1,7 +1,8 @@
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
-import Link from "next/link";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { twilight } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Head from "next/head";
 import Skeleton from "../../components/Skeleton";
 
@@ -76,6 +77,29 @@ const renderOptions = {
           alt={node.data.target.fields.description}
         />
       );
+    },
+    [BLOCKS.PARAGRAPH]: (node, children) => {
+      if (
+        node.content.length === 1 &&
+        node.content[0].marks.find((x) => x.type === "code")
+      ) {
+        return <pre className="lang-html">{children}</pre>;
+      }
+      return <p>{children}</p>;
+    },
+
+    renderMark: {
+      [MARKS.CODE]: (text) => {
+        return (
+          <SyntaxHighlighter
+            language="javascript"
+            style={twilight}
+            showLineNumbers
+          >
+            {text}
+          </SyntaxHighlighter>
+        );
+      },
     },
   },
 };
