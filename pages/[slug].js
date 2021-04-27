@@ -3,9 +3,9 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import Image from "next/image";
 import Head from "next/head";
 import Skeleton from "../components/Skeleton";
+import { motion } from "framer-motion";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -80,7 +80,6 @@ const renderOptions = {
       );
     },
     [BLOCKS.PARAGRAPH]: (node, children) => {
-      console.log(node);
       if (
         node.content.length === 1 &&
         node.content[0].marks.find((x) => x.type === "code")
@@ -115,38 +114,44 @@ const BlogDetails = ({ blog }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <main id="journal">
-        <div className="spacer">
-          <article className="single">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                  <div className="mar-top-lg">
-                    <span className="time">{date}</span>
-                    <h2 className="article-title">{title}</h2>
-                    <p>{desc}</p>
+      <motion.div
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <main id="journal">
+          <div className="spacer">
+            <article className="single">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                    <div className="mar-top-lg">
+                      <span className="time">{date}</span>
+                      <h2 className="article-title">{title}</h2>
+                      <p>{desc}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                    {documentToReactComponents(content, renderOptions)}
                   </div>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
-                  {documentToReactComponents(content, renderOptions)}
+              <div className="next-article">
+                <div className="row">
+                  <div className="col-lg-8 offset-lg-2 col-md-12">
+                    <p>Next Article</p>
+                    <h2>
+                      <div>{documentToReactComponents(nextBlogLink)}</div>
+                    </h2>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="next-article">
-              <div className="row">
-                <div className="col-lg-8 offset-lg-2 col-md-12">
-                  <p>Next Article</p>
-                  <h2>
-                    <div>{documentToReactComponents(nextBlogLink)}</div>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </main>
+            </article>
+          </div>
+        </main>
+      </motion.div>
     </>
   );
 };
