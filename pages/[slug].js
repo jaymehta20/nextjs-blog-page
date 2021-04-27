@@ -104,6 +104,22 @@ const renderOptions = {
     },
   },
 };
+const easing = [0.6, -0.05, 0.01, 0.99];
+
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 1,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing,
+    },
+  },
+};
 
 const BlogDetails = ({ blog }) => {
   if (!blog) return <Skeleton />;
@@ -114,43 +130,41 @@ const BlogDetails = ({ blog }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <motion.div
-        exit={{ opacity: 0 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
-        <main id="journal">
-          <div className="spacer">
-            <article className="single">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                    <div className="mar-top-lg">
-                      <span className="time">{date}</span>
-                      <h2 className="article-title">{title}</h2>
-                      <p>{desc}</p>
+      <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+        <motion.div variants={fadeInUp}>
+          <main id="journal">
+            <div className="spacer">
+              <article className="single">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                      <div className="mar-top-lg">
+                        <span className="time">{date}</span>
+                        <h2 className="article-title">{title}</h2>
+                        <p>{desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                      {documentToReactComponents(content, renderOptions)}
                     </div>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
-                    {documentToReactComponents(content, renderOptions)}
+                <div className="next-article">
+                  <div className="row">
+                    <div className="col-lg-8 offset-lg-2 col-md-12">
+                      <p>Next Article</p>
+                      <h2>
+                        <div>{documentToReactComponents(nextBlogLink)}</div>
+                      </h2>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="next-article">
-                <div className="row">
-                  <div className="col-lg-8 offset-lg-2 col-md-12">
-                    <p>Next Article</p>
-                    <h2>
-                      <div>{documentToReactComponents(nextBlogLink)}</div>
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </main>
+              </article>
+            </div>
+          </main>
+        </motion.div>
       </motion.div>
     </>
   );
