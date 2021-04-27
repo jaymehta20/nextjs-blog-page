@@ -5,7 +5,6 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Head from "next/head";
 import Skeleton from "../components/Skeleton";
-import { motion } from "framer-motion";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -104,26 +103,6 @@ const renderOptions = {
     },
   },
 };
-const easing = [0.6, -0.05, 0.01, 0.99];
-
-const fadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 1,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
-  },
-  exit: {
-    y: -60,
-    opacity: 0,
-  },
-};
 
 const BlogDetails = ({ blog }) => {
   if (!blog) return <Skeleton />;
@@ -134,42 +113,39 @@ const BlogDetails = ({ blog }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <motion.div exit="exit" initial="initial" animate="animate">
-        <motion.div variants={fadeInUp}>
-          <main id="journal">
-            <div className="spacer">
-              <article className="single">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                      <div className="mar-top-lg">
-                        <span className="time">{date}</span>
-                        <h2 className="article-title">{title}</h2>
-                        <p>{desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
-                      {documentToReactComponents(content, renderOptions)}
-                    </div>
+
+      <main id="journal">
+        <div className="spacer">
+          <article className="single">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                  <div className="mar-top-lg">
+                    <span className="time">{date}</span>
+                    <h2 className="article-title">{title}</h2>
+                    <p>{desc}</p>
                   </div>
                 </div>
-                <div className="next-article">
-                  <div className="row">
-                    <div className="col-lg-8 offset-lg-2 col-md-12">
-                      <p>Next Article</p>
-                      <h2>
-                        <div>{documentToReactComponents(nextBlogLink)}</div>
-                      </h2>
-                    </div>
-                  </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  {documentToReactComponents(content, renderOptions)}
                 </div>
-              </article>
+              </div>
             </div>
-          </main>
-        </motion.div>
-      </motion.div>
+            <div className="next-article">
+              <div className="row">
+                <div className="col-lg-8 offset-lg-2 col-md-12">
+                  <p>Next Article</p>
+                  <h2>
+                    <div>{documentToReactComponents(nextBlogLink)}</div>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
     </>
   );
 };
