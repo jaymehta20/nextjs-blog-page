@@ -33,6 +33,10 @@ const fadeInUp = {
       ease: easing,
     },
   },
+  exit: {
+    y: -60,
+    opacity: 0,
+  },
 };
 const Blog = ({ blogs }) => {
   return (
@@ -40,7 +44,7 @@ const Blog = ({ blogs }) => {
       <Head>
         <title>Blog | Codegrain</title>
       </Head>
-      <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+      <motion.div exit="exit" initial="initial" animate="animate">
         <motion.div variants={fadeInUp} transition={{ delay: 0.2 }}>
           <main id="journal">
             <div className="spacer">

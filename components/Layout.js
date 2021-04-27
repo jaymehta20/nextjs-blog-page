@@ -1,23 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import { motion } from "framer-motion";
 
-const easing = [0.6, -0.05, 0.01, 0.99];
-
-const fadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 1,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
-  },
-};
 const Layout = ({ children }) => {
   return (
     <>
@@ -31,136 +14,126 @@ const Layout = ({ children }) => {
         ></script>
       </Head>
 
-      <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-        <motion.div variants={fadeInUp} transition={{ delay: 0.2 }}>
-          <header>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <a
-                    className="logo smooth-leave"
-                    href="https://codegra.in/"
-                  ></a>
-                  <nav>
-                    <ul>
-                      <li>
-                        <Link
-                          className="smooth-leave"
-                          href="https://codegra.in/about"
-                        >
-                          About
-                        </Link>
-                      </li>
-                      <li>
-                        <a
-                          className="smooth-leave"
-                          href="https://codegra.in/services"
-                        >
-                          Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="smooth-leave"
-                          href="https://codegra.in/work"
-                        >
-                          Work
-                        </a>
-                      </li>
-                      <li>
-                        <Link className="smooth-leave" href="/">
-                          Blog
-                        </Link>
-                      </li>
-                      <li>
-                        <a
-                          className="smooth-leave"
-                          href="https://codegra.in/contact"
-                        >
-                          Contact
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                  <span className="nav-toggle">Menu</span>
-                </div>
-              </div>
+      <header>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <a className="logo smooth-leave" href="https://codegra.in/"></a>
+              <nav>
+                <ul>
+                  <li>
+                    <Link
+                      className="smooth-leave"
+                      href="https://codegra.in/about"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      className="smooth-leave"
+                      href="https://codegra.in/services"
+                    >
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a className="smooth-leave" href="https://codegra.in/work">
+                      Work
+                    </a>
+                  </li>
+                  <li>
+                    <Link className="smooth-leave" href="/">
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      className="smooth-leave"
+                      href="https://codegra.in/contact"
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <span className="nav-toggle">Menu</span>
             </div>
-          </header>
-          {children}
-          <footer className="mar-top-lg">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-4 col-md-3 col-sm-12">
-                  <a className="logo smooth-leave" href="./index.html"></a>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <div className="footer-contacts">
-                    <div className="wrap">
-                      <div className="address">
-                        <p>
-                          Pune
-                          <br />
-                          Maharashtra, IN
-                        </p>
-                      </div>
-                      <a className="email" href="mailto:codegrain@gmail.com">
-                        codegrain@gmail.com
-                      </a>
+          </div>
+        </div>
+      </header>
+      {children}
+      <footer className="mar-top-lg">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 col-md-3 col-sm-12">
+              <a className="logo smooth-leave" href="./index.html"></a>
+            </div>
+            <div className="col-lg-4 col-md-4 col-sm-12">
+              <div className="footer-contacts">
+                <div className="wrap">
+                  <div className="address">
+                    <p>
+                      Pune
                       <br />
-                      <a className="phone" href="tel:+919022332201">
-                        +91 902-233-2202
-                      </a>
-                    </div>
+                      Maharashtra, IN
+                    </p>
                   </div>
-                </div>
-                <div className="col-lg-4 col-md-5 col-sm-12">
-                  <div className="social-links">
-                    <ul>
-                      <li>
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href="https://instagram.com/codegra.in"
-                        >
-                          ig
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href="https://twitter.com/codegrain"
-                        >
-                          tw
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href="https://www.behance.net/CodeGrain"
-                        >
-                          Bē
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href="https://www.youtube.com/channel/UCPKsb4U7x_4Ws-RsKQThVAA/featured"
-                        >
-                          yt
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <a className="email" href="mailto:codegrain@gmail.com">
+                    codegrain@gmail.com
+                  </a>
+                  <br />
+                  <a className="phone" href="tel:+919022332201">
+                    +91 902-233-2202
+                  </a>
                 </div>
               </div>
             </div>
-          </footer>
-        </motion.div>
-      </motion.div>
+            <div className="col-lg-4 col-md-5 col-sm-12">
+              <div className="social-links">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://instagram.com/codegra.in"
+                    >
+                      ig
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://twitter.com/codegrain"
+                    >
+                      tw
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.behance.net/CodeGrain"
+                    >
+                      Bē
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.youtube.com/channel/UCPKsb4U7x_4Ws-RsKQThVAA/featured"
+                    >
+                      yt
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
