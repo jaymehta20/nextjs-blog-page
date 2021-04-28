@@ -7,6 +7,7 @@
   --clr-cultured: #f6f7f9;
   --clr-onyx: #3a3b42;
   --clr-eerie-black: #252422;
+  --clr-rich-black: #0f0f0f;
   --clr-black: #000;
 
   --clr-pistachio: #8cc972;
@@ -2322,7 +2323,7 @@ article.single .next-article a:hover {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: rgb(0, 0, 0);
+    background: var(--clr-eerie-black);
   }
 
   h1,
@@ -2414,7 +2415,7 @@ article.single .next-article a:hover {
   }
 
   header {
-    background-color: var(--clr-black);
+    background-color: var(--clr-eerie-black);
   }
 
   header .logo {
@@ -2422,7 +2423,7 @@ article.single .next-article a:hover {
   }
 
   header nav {
-    background-color: var(--clr-black);
+    background-color: var(--clr-eerie-black);
   }
 
   header nav ul li a,
@@ -2475,7 +2476,7 @@ article.single .next-article a:hover {
   }
 
   footer {
-    background-color: var(--clr-eerie-black);
+    background-color: var(--clr-rich-black);
   }
 
   footer .logo {
