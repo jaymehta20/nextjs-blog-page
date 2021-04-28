@@ -25,27 +25,27 @@ const Blog = ({ blogs }) => {
         <title>Blog | Codegrain</title>
       </Head>
 
-        <main id="journal">
-          <div className="spacer">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                  <div className="page-intro mar-top-lg">
-                    <h1 className="page-title">Blog</h1>
-                    <p>Sharing super ideas in simple, minimal & elegant way.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="articles-list mar-top-lg">
-                <div className="grids">
-                  {blogs.map((blog) => (
-                    <BlogCard key={blog.sys.id} blog={blog} />
-                  ))}
+      <main id="journal">
+        <div className="spacer">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                <div className="page-intro mar-top-lg">
+                  <h1 className="page-title">Blog</h1>
+                  <p>Sharing super ideas in simple, minimal & elegant way.</p>
                 </div>
               </div>
             </div>
+            <div className="articles-list mar-top-lg">
+              <div className="grids">
+                {blogs.map((blog) => (
+                  <BlogCard key={blog.sys.id} blog={blog} />
+                ))}
+              </div>
+            </div>
           </div>
-        </main>
+        </div>
+      </main>
     </>
   );
 };

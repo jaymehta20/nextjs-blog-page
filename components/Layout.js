@@ -19,45 +19,35 @@ const Layout = ({ children }) => {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <a className="logo smooth-leave" href="https://codegra.in/"></a>
+                <a className="logo smooth-leave" href="/"></a>
                 <nav>
                   <ul>
                     <li>
-                      <Link
-                        className="smooth-leave"
-                        href="https://codegra.in/about"
-                      >
-                        About
+                      <Link className="smooth-leave" href="/">
+                        <a className="smooth-leave">About</a>
                       </Link>
                     </li>
                     <li>
-                      <a
-                        className="smooth-leave"
-                        href="https://codegra.in/services"
-                      >
-                        Services
-                      </a>
+                      <Link href="/">
+                        <a className="smooth-leave">Services</a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        className="smooth-leave"
-                        href="https://codegra.in/work"
-                      >
-                        Work
-                      </a>
+                      <Link href="/">
+                        <a className="smooth-leave">Work</a>
+                      </Link>
                     </li>
                     <li>
                       <Link className="smooth-leave" href="/">
-                        Blog
+                        <a className="smooth-leave">
+                          Blog
+                        </a>
                       </Link>
                     </li>
                     <li>
-                      <a
-                        className="smooth-leave"
-                        href="https://codegra.in/contact"
-                      >
-                        Contact
-                      </a>
+                      <Link href="/">
+                        <a className="smooth-leave">Contact</a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -78,17 +68,17 @@ const Layout = ({ children }) => {
                   <div className="wrap">
                     <div className="address">
                       <p>
-                        Pune
+                        City
                         <br />
-                        Maharashtra, IN
+                        State, Country
                       </p>
                     </div>
                     <a className="email" href="mailto:codegrain@gmail.com">
-                      codegrain@gmail.com
+                      fake@gmail.com
                     </a>
                     <br />
                     <a className="phone" href="tel:+919022332201">
-                      +91 902-233-2202
+                      +91 111-222-6969
                     </a>
                   </div>
                 </div>
@@ -97,38 +87,22 @@ const Layout = ({ children }) => {
                 <div className="social-links">
                   <ul>
                     <li>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://instagram.com/codegra.in"
-                      >
+                      <a target="_blank" rel="noreferrer" href="#">
                         ig
                       </a>
                     </li>
                     <li>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://twitter.com/codegrain"
-                      >
+                      <a target="_blank" rel="noreferrer" href="#">
                         tw
                       </a>
                     </li>
                     <li>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://www.behance.net/CodeGrain"
-                      >
+                      <a target="_blank" rel="noreferrer" href="#">
                         Bē
                       </a>
                     </li>
                     <li>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://www.youtube.com/channel/UCPKsb4U7x_4Ws-RsKQThVAA/featured"
-                      >
+                      <a target="_blank" rel="noreferrer" href="#">
                         yt
                       </a>
                     </li>
