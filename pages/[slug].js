@@ -139,7 +139,7 @@ const BlogDetails = ({ blog }) => {
                 <div className="col-lg-8 offset-lg-2 col-md-12">
                   <p>Next Article</p>
                   <h2>
-                    <div>{documentToReactComponents(nextBlogLink)}</div>
+                    <a>{documentToReactComponents(nextBlogLink)}</a>
                   </h2>
                 </div>
               </div>

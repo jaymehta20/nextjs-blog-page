@@ -2622,6 +2622,9 @@ article.single .next-article a:hover {
   article.single .next-article a {
     color: var(--clr-cultured);
   }
+  article.single .next-article a:hover {
+    color: var(--clr-light-grey);
+  }
 
   .next-article a:hover {
     color: var(--clr-light-grey);
