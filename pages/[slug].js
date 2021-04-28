@@ -129,7 +129,7 @@ const BlogDetails = ({ blog }) => {
                 </div>
               </div>
               <div className="row">
-                <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                   {documentToReactComponents(content, renderOptions)}
                 </div>
               </div>

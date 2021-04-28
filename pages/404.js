@@ -12,7 +12,6 @@ const NotFound = () => {
   }, []);
   return (
     <>
-      <div className="wrap">
         <main className="custom-pad">
           <div className="container">
             <div className="mar-top-lg">
@@ -40,7 +39,6 @@ const NotFound = () => {
             </div>
           </div>
         </main>
-      </div>
     </>
   );
 };
