@@ -24,9 +24,11 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ![image](https://user-images.githubusercontent.com/23277339/116436321-ec095880-a869-11eb-83ac-06f5608cb469.png)
 
 ## Inner Page
-![screencapture-localhost-3000-master-frost-gradients-2021-04-28-21_39_22](https://user-images.githubusercontent.com/23277339/116436697-460a1e00-a86a-11eb-9e32-81e11caaced8.png)
+![screencapture-nextjs-blog-page-vercel-app-master-frost-gradients-2021-04-28-23_26_58](https://user-images.githubusercontent.com/23277339/116450745-4827a900-a879-11eb-915e-af8335f90956.png)
 
-![screencapture-nextjs-blog-page-vercel-app-10-key-takeaways-from-show-your-work-2021-04-28-21_40_31](https://user-images.githubusercontent.com/23277339/116436801-620dbf80-a86a-11eb-9a38-6f3b4e57131a.png)
+
+
+![screencapture-nextjs-blog-page-vercel-app-10-key-takeaways-from-show-your-work-2021-04-28-23_27_37](https://user-images.githubusercontent.com/23277339/116450791-5970b580-a879-11eb-94b9-7f0c2f9d0bad.png)
 
 
 
