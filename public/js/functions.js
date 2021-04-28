@@ -160,38 +160,10 @@ jQuery(function ($) {
       });
   };
 
-  /*
-		Animsition
-	*/
-  var animsition = function () {
-    $(".wrap").animsition({
-      inClass: "page-in",
-      outClass: "page-out",
-      inDuration: 400,
-      outDuration: 400,
-      linkElement: ".smooth-leave",
-      loading: true,
-      loadingParentElement: "body",
-      loadingClass: false,
-      loadingInner: "",
-      timeout: false,
-      timeoutCountdown: 5000,
-      onLoadEvent: true,
-      browser: ["animation-duration", "-webkit-animation-duration"],
-      overlay: false,
-      overlayClass: "animsition-overlay-slide",
-      overlayParentElement: "body",
-      transition: function (url) {
-        window.location.href = url;
-      },
-    });
-  };
-
   $(window).on("load", works());
   $(document).ready(function () {
     nagivation();
     carousel();
     inputFocus();
-    animsition();
   });
 });
