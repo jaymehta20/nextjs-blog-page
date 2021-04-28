@@ -90,15 +90,7 @@ const renderOptions = {
 
     renderMark: {
       [MARKS.CODE]: (text) => {
-        return (
-          <SyntaxHighlighter
-            language="javascript"
-            style={tomorrow}
-            showLineNumbers
-          >
-            {text}
-          </SyntaxHighlighter>
-        );
+        return <SyntaxHighlighter language="html">{text}</SyntaxHighlighter>;
       },
     },
   },

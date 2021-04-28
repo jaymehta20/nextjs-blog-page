@@ -2611,6 +2611,10 @@ article.single .next-article a:hover {
     color: var(--clr-white);
   }
 
+  article:hover .article-text .title {
+    color: var(--clr-white);
+  }
+
   article.single .next-article p {
     color: var(--clr-cultured);
   }
