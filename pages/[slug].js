@@ -90,7 +90,11 @@ const renderOptions = {
 
     renderMark: {
       [MARKS.CODE]: (text) => {
-        return <SyntaxHighlighter language="html">{text}</SyntaxHighlighter>;
+        return (
+          <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers>
+            {text}
+          </SyntaxHighlighter>
+        );
       },
     },
   },
@@ -104,6 +108,11 @@ const BlogDetails = ({ blog }) => {
     <>
       <Head>
         <title>{title}</title>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"
+          integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg=="
+          crossOrigin="anonymous"
+        ></script>
       </Head>
 
       <main id="journal">

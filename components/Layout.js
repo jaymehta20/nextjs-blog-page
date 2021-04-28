@@ -7,11 +7,6 @@ const Layout = ({ children }) => {
       <Head>
         <script type="text/javascript" src="/js/plugins.min.js"></script>
         <script type="text/javascript" src="/js/functions.js"></script>
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"
-          integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg=="
-          crossOrigin="anonymous"
-        ></script>
       </Head>
 
       <div className="wrap">
@@ -39,9 +34,7 @@ const Layout = ({ children }) => {
                     </li>
                     <li>
                       <Link className="smooth-leave" href="/">
-                        <a className="smooth-leave">
-                          Blog
-                        </a>
+                        <a className="smooth-leave">Blog</a>
                       </Link>
                     </li>
                     <li>
