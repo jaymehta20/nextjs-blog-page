@@ -13,7 +13,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 
 ## Dark Mode 🌚
-![image](https://user-images.githubusercontent.com/23277339/116541758-810f5e80-a909-11eb-98dd-1be6b4720d7c.png)
+![image](https://user-images.githubusercontent.com/23277339/116543111-165f2280-a90b-11eb-8aa5-bf79d5b107f6.png)
 
 
 ## Light Mode 🌞
@@ -24,9 +24,6 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ![image](https://user-images.githubusercontent.com/23277339/116542365-35a98000-a90a-11eb-8cee-aeb01d7d7237.png)
 
-
-
-![image](https://user-images.githubusercontent.com/23277339/116542335-2e827200-a90a-11eb-8d60-b909c81c07fd.png)
 
 
 ## Inner Page
