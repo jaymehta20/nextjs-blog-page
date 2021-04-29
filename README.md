@@ -13,22 +13,29 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 
 ## Dark Mode 🌚
-![image](https://user-images.githubusercontent.com/23277339/116435818-67b6d580-a869-11eb-95dd-00455dca39f4.png)
+![image](https://user-images.githubusercontent.com/23277339/116541758-810f5e80-a909-11eb-98dd-1be6b4720d7c.png)
+
 
 ## Light Mode 🌞
-![image](https://user-images.githubusercontent.com/23277339/116435937-83ba7700-a869-11eb-8a16-31680e38c71f.png)
+![image](https://user-images.githubusercontent.com/23277339/116542004-c2a00980-a909-11eb-8de8-d2d0c52d6564.png)
+
 
 ## Grid Layout 🚀
-![image](https://user-images.githubusercontent.com/23277339/116436274-ddbb3c80-a869-11eb-9a01-c78daa995a07.png)
 
-![image](https://user-images.githubusercontent.com/23277339/116436321-ec095880-a869-11eb-83ac-06f5608cb469.png)
+![image](https://user-images.githubusercontent.com/23277339/116542365-35a98000-a90a-11eb-8cee-aeb01d7d7237.png)
+
+
+
+![image](https://user-images.githubusercontent.com/23277339/116542335-2e827200-a90a-11eb-8d60-b909c81c07fd.png)
+
 
 ## Inner Page
-![screencapture-nextjs-blog-page-vercel-app-master-frost-gradients-2021-04-28-23_26_58](https://user-images.githubusercontent.com/23277339/116450745-4827a900-a879-11eb-915e-af8335f90956.png)
+![image](https://user-images.githubusercontent.com/23277339/116542654-84efb080-a90a-11eb-85f6-5a3d98de6aa0.png)
 
 
 
-![screencapture-nextjs-blog-page-vercel-app-10-key-takeaways-from-show-your-work-2021-04-28-23_27_37](https://user-images.githubusercontent.com/23277339/116450791-5970b580-a879-11eb-94b9-7f0c2f9d0bad.png)
+![image](https://user-images.githubusercontent.com/23277339/116542642-80c39300-a90a-11eb-92a1-d8fb2bb66f08.png)
+
 
 
 
