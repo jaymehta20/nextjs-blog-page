@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Head from "next/head";
+import Script from "next/script";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <script type="text/javascript" src="/js/plugins.min.js"></script>
-        <script type="text/javascript" src="/js/functions.js"></script>
+        <script type="text/javascript" src="/js/plugins.min.js" />
+        <script type="text/javascript" src="/js/functions.js" />
       </Head>
 
       <div className="wrap">

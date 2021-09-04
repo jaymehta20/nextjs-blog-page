@@ -1,9 +1,10 @@
-import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { createClient } from "contentful";
+import Head from "next/head";
+import Script from "next/script";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import Head from "next/head";
 import Skeleton from "../components/Skeleton";
 
 const client = createClient({
@@ -108,11 +109,12 @@ const BlogDetails = ({ blog }) => {
     <>
       <Head>
         <title>{title}</title>
-        <script
+        <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"
           integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg=="
           crossOrigin="anonymous"
-        ></script>
+          strategy="beforeInteractive"
+        />
       </Head>
 
       <main id="journal">
