@@ -2,7 +2,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { createClient } from "contentful";
 import Head from "next/head";
-import Script from "next/script";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Skeleton from "../components/Skeleton";
@@ -84,7 +83,7 @@ const renderOptions = {
         node.content.length === 1 &&
         node.content[0].marks.find((x) => x.type === "code")
       ) {
-        return <pre className="lang-html">{children}</pre>;
+        return <pre className="language-html">{children}</pre>;
       }
       return <p>{children}</p>;
     },
@@ -109,12 +108,11 @@ const BlogDetails = ({ blog }) => {
     <>
       <Head>
         <title>{title}</title>
-        <Script
+        <script
           src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"
           integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg=="
           crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
+        ></script>
       </Head>
 
       <main id="journal">
