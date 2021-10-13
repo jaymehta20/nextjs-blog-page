@@ -79,10 +79,12 @@ const renderOptions = {
       );
     },
     [BLOCKS.PARAGRAPH]: (node, children) => {
-      if (
-        node.content.length === 1 &&
-        node.content[0].marks.find((x) => x.type === "code")
-      ) {
+      console.log(node, children);
+      // if (
+      //   node.content.length === 1 &&
+      //   node.content[0].marks.find((x) => x.type === "code")
+      // )
+      if (node.content[0].marks.length) {
         return <pre className="language-html">{children}</pre>;
       }
       return <p>{children}</p>;
@@ -91,7 +93,12 @@ const renderOptions = {
     renderMark: {
       [MARKS.CODE]: (text) => {
         return (
-          <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers>
+          <SyntaxHighlighter
+            language="html"
+            style={tomorrow}
+            showLineNumbers
+            showInlineLineNumbers
+          >
             {text}
           </SyntaxHighlighter>
         );
