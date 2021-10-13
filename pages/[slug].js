@@ -79,7 +79,6 @@ const renderOptions = {
       );
     },
     [BLOCKS.PARAGRAPH]: (node, children) => {
-      console.log(node, children);
       // if (
       //   node.content.length === 1 &&
       //   node.content[0].marks.find((x) => x.type === "code")
